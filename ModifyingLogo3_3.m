@@ -17,6 +17,25 @@ newlogo(:,:,3) = blue;
 % Display new logo 
 subplot(2,2,2)
 imshow(newlogo)
-
-
-
+% Modifying the red colors
+red = red<100 & blue<100 & green<100; 
+red(red) = 102; 
+green(red) = 102; 
+blue(red) = 255; 
+newlogo(:,:,1) = red;
+newlogo(:,:,2) = green;
+newlogo(:,:,3) = blue;
+% Display new logos 
+subplot(2,2,3)
+imshow(newlogo)
+% Modifying the red colors
+green = red<100 & blue<100 & green<100; 
+red(green) = 255; 
+green(green) = 102; 
+blue(green) = 255; 
+newlogo(:,:,1) = red;
+newlogo(:,:,2) = green;
+newlogo(:,:,3) = blue;
+% Display new logos 
+subplot(2,2,4)
+imshow(newlogo)
