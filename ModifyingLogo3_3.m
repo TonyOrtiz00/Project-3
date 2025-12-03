@@ -28,7 +28,7 @@ newlogo(:,:,3) = blue;
 % Display new logos 
 subplot(2,2,3)
 imshow(newlogo)
-% Modifying the red colors
+% Modifying the green colors
 green = red<100 & blue<100 & green<100; 
 red(green) = 255; 
 green(green) = 102; 
