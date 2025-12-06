@@ -22,9 +22,9 @@ x_plot=linspace(-10,10,400);
 y_plot=a*x_plot.^2+b*x_plot+c;
 plot(x_plot,y_plot,'LineWidth',2)
 hold on
-plot(x,y,'o','MarkerSize',8,'MarkerFaceColor','r')
+plot(x,y,'o','MarkerSize',5,'MarkerFaceColor','r')
 grid on
-title('ParabolafromUserPoints')
+title('Parabola from User Points')
 xlabel('x')
 ylabel('y')
 hold off
