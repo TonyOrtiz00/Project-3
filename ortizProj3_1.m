@@ -10,7 +10,21 @@ A = [x(1)^2 x(1) 1;
 b = [y(1); 
    y(2);
    y(3)];
-coeff =A \ b; %Solvefora,b,c
+%Solve for a,b,c
+coeff = A \ b; 
 a = coeff(1);
 b_ = coeff(2);
 c = coeff(3);
+%Display equation
+fprintf("The parabola is: y=%.2fx^2+%.2fx+%.2f\n",a,b_,c);
+%Graph parabola and points
+x_plot=linspace(-10,10,400);
+y_plot=a*x_plot.^2+b*x_plot+c;
+plot(x_plot,y_plot,'LineWidth',2)
+hold on
+plot(x,y,'o','MarkerSize',8,'MarkerFaceColor','r')
+grid on
+title('ParabolafromUserPoints')
+xlabel('x')
+ylabel('y')
+hold off
